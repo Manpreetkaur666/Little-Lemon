@@ -28,6 +28,36 @@
   color: #61dafb;
 }
 
+/**************************** Header *********************************/
+header {
+  text-align: center;
+}
+
+header img {
+  width: 6rem;
+  height: 6rem;
+}
+
+/**************************** Navbar *********************************/
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+/**************************** Main *********************************/
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner img {
+  width: 10rem;
+  height: 10rem;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
