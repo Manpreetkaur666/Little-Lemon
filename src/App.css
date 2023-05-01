@@ -1,31 +1,22 @@
-.App {
-  text-align: center;
+:root {
+  --yellow: #FED049;
+  --mint: #CFFDE1;
+  --green: #68B984;
+  --nature: #3D5656;
+  --red: #721817;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  overflow-x: hidden;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  color: #721817;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
+h2 {
+  color: #721817;
 }
 
 /**************************** Header *********************************/
@@ -34,11 +25,17 @@ header {
 }
 
 header img {
+  margin: 0.3rem;
   width: 6rem;
   height: 6rem;
 }
 
 /**************************** Navbar *********************************/
+nav {
+ background-color: var(--nature);
+ /* margin: 1rem; */
+}
+
 nav ul {
   list-style-type: none;
   display: flex;
@@ -46,23 +43,61 @@ nav ul {
 
 }
 
+.nav-link{
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 0.5rem;
+  color: #FED049 !important;
+}
+
 /**************************** Main *********************************/
-.banner {
-    display: flex;
-    align-items: center;
+/* .banner {
+    display: grid;
+    grid-template-columns: repeat(2,500px);
     justify-content: center;
+} */
+
+.main {
+  text-align: center;
+  width: 50%;
+  height: 60vh;
+  margin: 3rem auto;
+  padding: 1rem;
+  border-radius: 20px;
+  box-shadow: 10px 10px 20px 12px var(--nature);
 }
 
-.banner img {
-  width: 10rem;
-  height: 10rem;
+.main form div {
+  display: flex;
+  margin: 25px 0;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main div label {
+  margin: 0 15px;
+  font-weight: 500;
+  font-size: 20px;
 }
+
+.btnBookNow {
+  background-color: var(--nature);
+  color: var(--yellow);
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.btnBookNow:hover {
+  background-color: var(--red);
+}
+
+
+/**************************** Footer *********************************/
+.footer {
+  height: 3rem;
+  text-align: center;
+  color: var(--yellow);
+  background-color: var(--nature);
+}
+
+
