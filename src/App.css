@@ -1,39 +1,56 @@
 :root {
-  --yellow: #FED049;
+  --yellow: #FACE14;
   --mint: #CFFDE1;
-  --green: #68B984;
-  --nature: #3D5656;
+  --green: #495E57;
+  --nature: rgb(73,94,87,74%);
   --red: #721817;
 }
 
 * {
+  margin: 0;
+  padding: 0;
   overflow-x: hidden;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 h1 {
-  color: #721817;
+  color: var(--yellow);
 }
 
 h2 {
-  color: #721817;
+  color: white;
 }
 
+/* p {
+  color: white;
+} */
+
+button {
+  background-color: var(--yellow);
+  border-radius: 20px;
+  padding: 5px 25px;
+}
 /**************************** Header *********************************/
 header {
   text-align: center;
 }
 
-header img {
+/* header img {
   margin: 0.3rem;
   width: 6rem;
   height: 6rem;
-}
+} */
 
 /**************************** Navbar *********************************/
-nav {
+/* nav {
  background-color: var(--nature);
- /* margin: 1rem; */
+ margin: 1rem;
+} */
+
+nav img {
+  margin: 0.3rem;
+  width: 5rem;
+  height: 5rem;
 }
 
 nav ul {
@@ -47,8 +64,118 @@ nav ul {
   font-size: 1.3rem;
   font-weight: 500;
   padding: 0.5rem;
-  color: #FED049 !important;
+  color: var(--yellow) !important;
 }
+
+/**************************** HOME *********************************/
+
+/********** hero Section **********/
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 5vmax;
+  background-color: var(--green);
+}
+
+.hero-section p {
+  color: white;
+}
+
+.image img {
+  width: 20vmax;
+  height: 20vmax;
+}
+
+/********** Highlights **********/
+
+.highlights {
+  margin: 5vmax;
+}
+
+.highlights h2 {
+   margin: 2vmax 0;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+   width: 20rem;
+}
+
+.card img {
+  width: 20rem;
+  height: 20rem;
+  object-fit: cover;
+}
+
+/*********** Testimonial ********************/
+.row {
+  margin: 0 5vmax;
+}
+
+.card {
+  width: 20vmax;
+  height: 100%;
+}
+
+.testimonial-card .card-up {
+  background-color: yellow;
+  height: 60px;
+  overflow: hidden;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+.testimonial-card .avatar {
+  margin-top: -60px;
+  overflow: hidden;
+  border: 3px solid #fff;
+  border-radius: 50%;
+}
+
+/********** About **********/
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  margin: 5vmax;
+}
+
+.image-stack {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  position: relative;
+}
+
+.image-stack img {
+  display: block;
+  width: 25vmax;
+  height: 25vmax;
+}
+
+.aboutImg1{
+  grid-column: 4 / -1;
+  grid-row: 1;
+}
+
+.aboutImg2 {
+  grid-row: 1;
+  grid-column: 1 / span 8;
+  padding-top: 20%; 
+  z-index: 1;
+}
+
+/* .image {
+  position: relative;
+} */
+
+/* .aboutImg1 {
+  position: relative;
+  top: 50px;
+  z-index: 2;
+} */
+
 
 /**************************** Main *********************************/
 /* .banner {
@@ -92,12 +219,18 @@ nav ul {
 }
 
 
+
 /**************************** Footer *********************************/
 .footer {
-  height: 3rem;
-  text-align: center;
-  color: var(--yellow);
+  padding: 5vmax;
+  display: flex;
+  justify-content: space-between;
   background-color: var(--nature);
+}
+
+.footer img {
+  height: 100%;
+  width: 100%;
 }
 
 
