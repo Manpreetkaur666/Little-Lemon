@@ -227,3 +227,43 @@ nav ul {
 }
 
 
+/**************************** Success *********************************/
+.success {
+  text-align: center;
+  padding: 7vw;
+}
+
+.success h2 {
+  color: var(--red);
+}
+
+.success p {
+  color: var(--green);
+}
+
+
+@media only screen and (max-width: 600px) {
+ .cards {
+  flex-direction: column;
+ }
+
+ .card {
+  width: 25rem;
+}
+
+.card img {
+ width: 20rem;
+ height: 20rem;
+ object-fit: cover;
+}
+
+.footer {
+  flex-direction: column;
+}
+
+.footer img {
+  height: 50%;
+  width: 50%;
+}
+
+}

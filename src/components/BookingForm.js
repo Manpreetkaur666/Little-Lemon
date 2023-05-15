@@ -1,12 +1,20 @@
-import React, {useState, useReducer, useRef, useEffect} from 'react'
+import React, {useState, useReducer, useRef, useEffect} from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const BookingForm = () => {
 
+    const navigate = useNavigate();
     const [bookingDate, setBookingdate] = useState("");
     const dateInputRef = useRef(null);
    const [bookingTime, setBookingTime] = useState("");
 //    const [availableTimes, setAvailableTimes] = useState([]);
    
+// const [booking, setBooking] = useState({
+//     date: '',
+//     time: '',
+//     guest: '',
+//     occasion: '',
+// })
 
    const updateTimes = (availableTimes, action) => {
     // handle the state change
@@ -36,6 +44,7 @@ const BookingForm = () => {
 
    const submitHandler = (e) => {
           e.preventDefault();
+          navigate('/success');
    }
 
    const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes)
@@ -55,11 +64,11 @@ const BookingForm = () => {
             <form method="POST" onSubmit={submitHandler}>
                 <div>
                     <label htmlFor="booking_date">Booking Date</label>
-                    <input type="date" id="booking_date" name="booking_date" value={bookingDate} onChange={handleChange} ref={dateInputRef} />
+                    <input type="date" id="booking_date" name="booking_date" value={bookingDate} onChange={handleChange} ref={dateInputRef} required />
                 </div>
                 <div>
                     <label htmlFor="res-time">Choose time</label>
-                    <select id="res-time " value={availableTimes.initialTimes} onChange={handleTimeChange}>
+                    <select id="res-time " value={availableTimes.initialTimes} onChange={handleTimeChange} required>
                         <option>17:00</option>
                         <option>18:00</option>
                         <option>19:00</option>
@@ -70,11 +79,11 @@ const BookingForm = () => {
                 </div>
                 <div>
                     <label htmlFor="booking_people">Number of People</label>
-                    <input type="number" placeholder="1" min="1" max="10" id="guests" />
+                    <input type="number" placeholder="1" min="1" max="10" id="guests" required/>
                 </div>
                 <div>
                     <label htmlFor="booking_occasion">Ocassion</label>
-                    <input id="booking_ocassion" name="booking_occasion" list="ocassion" />
+                    <input id="booking_ocassion" name="booking_occasion" list="ocassion" required />
                     <datalist id="ocassion">
                         <option value="Birthday"></option>
                         <option value="Anniversary"></option>
@@ -83,7 +92,7 @@ const BookingForm = () => {
                 </div>
                 <div>
                     <label htmlFor="booking_loacation">Location</label>
-                    <input id="booking_location" name="booking_location" list="locations" />
+                    <input id="booking_location" name="booking_location" list="locations" required />
                     <datalist id="locations">
                         <option value="Mississauga"></option>
                         <option value="Toronto"></option>
