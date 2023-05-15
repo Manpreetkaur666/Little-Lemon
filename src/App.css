@@ -187,7 +187,7 @@ nav ul {
 .main {
   text-align: center;
   width: 50%;
-  height: 60vh;
+  height: 100%;
   margin: 3rem auto;
   padding: 1rem;
   border-radius: 20px;
@@ -206,13 +206,6 @@ nav ul {
   font-size: 20px;
 }
 
-.btnBookNow {
-  background-color: var(--nature);
-  color: var(--yellow);
-  font-size: 20px;
-  padding: 10px;
-  border-radius: 20px;
-}
 
 .btnBookNow:hover {
   background-color: var(--red);
