@@ -1,5 +1,7 @@
 import React, {useState, useReducer, useRef, useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
+import {seededRandom, fetchAPI, submitAPI} from  './API';
+
 
 const BookingForm = () => {
 
@@ -54,6 +56,7 @@ const BookingForm = () => {
    }
 
    useEffect(() => {
+  
     fetch(`https://raw.githubusercontent.com/Meta-Front-End-Developer-PC/capstone/master/api.js`)
      .then((response) => response.json())
    }, []);

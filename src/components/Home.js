@@ -6,12 +6,12 @@ import Testimonials from './Testimonials'
 
 const Home = () => {
   return (
-    <>
+    <main>
      <HeroSection />
     <Highlights />
     <Testimonials />
     <About />
-    </>
+    </main>
    
   )
 }
