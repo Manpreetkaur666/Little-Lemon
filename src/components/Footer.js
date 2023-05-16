@@ -3,7 +3,7 @@ import logo from '../images/logo.png';
 
 function Footer() {
   return (
-    <div className='footer'>
+    <footer className='footer'>
       <div className='logo'>
           <img src={logo} />
       </div>
@@ -37,7 +37,7 @@ function Footer() {
           <li>email</li>
          </ul>
       </div>
-    </div>
+    </footer>
   )
 }
 
